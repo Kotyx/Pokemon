@@ -13,7 +13,7 @@
       <RowConstraints />
    </rowConstraints>
    <children>
-      <GridPane prefHeight="545.0" prefWidth="823.0">
+      <GridPane prefHeight="545.0" prefWidth="823.0" style="-fx-background-color: BB2BBD;">
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -21,8 +21,8 @@
         </columnConstraints>
         <rowConstraints>
           <RowConstraints maxHeight="218.0" minHeight="10.0" prefHeight="144.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="285.0" minHeight="0.0" prefHeight="91.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="321.0" minHeight="0.0" prefHeight="307.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="285.0" minHeight="0.0" prefHeight="135.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="321.0" minHeight="0.0" prefHeight="265.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
             <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
@@ -36,22 +36,47 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Label alignment="CENTER" contentDisplay="CENTER" text="Umbreon" />
-                        <Label text="Nv.85" GridPane.columnIndex="1">
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Umbreon" textFill="WHITE" />
+                        <Label text="Nv.100" textFill="WHITE" GridPane.columnIndex="1">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
                            <GridPane.margin>
-                              <Insets left="15.0" />
+                              <Insets left="10.0" />
                            </GridPane.margin></Label>
                      </children>
                   </GridPane>
-                  <ImageView fitHeight="75.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@umbreon.png" />
-                     </image>
-                  </ImageView>
-                  <GridPane maxWidth="100.0" prefWidth="100.0">
+                  <GridPane alignment="CENTER" maxWidth="100.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="75.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@umbreon.png" />
+                           </image>
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <ImageView fitHeight="20.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                           <image>
+                              <Image url="@masculino.png" />
+                           </image>
+                           <GridPane.margin>
+                              <Insets left="30.0" top="70.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                     </children>
+                     <padding>
+                        <Insets bottom="30.0" top="30.0" />
+                     </padding>
+                  </GridPane>
+                  <GridPane maxWidth="100.0" prefHeight="20.0" prefWidth="100.0">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" maxWidth="45.0" minWidth="10.0" prefWidth="15.0" />
                       <ColumnConstraints hgrow="SOMETIMES" maxWidth="87.0" minWidth="10.0" prefWidth="85.0" />
@@ -60,15 +85,442 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <ProgressBar prefHeight="14.0" prefWidth="74.0" progress="1.0" style="-fx-background-color: green;" GridPane.columnIndex="1">
+                        <ProgressBar prefHeight="14.0" prefWidth="74.0" progress="1.0" style="-fx-accent: green;" GridPane.columnIndex="1">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
                         </ProgressBar>
-                        <Label alignment="TOP_LEFT" text="PS" textFill="#f2bc0c" />
+                        <Label alignment="TOP_LEFT" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: grey;" text="PS" textFill="#f2bc0c" />
+                     </children>
+                  </GridPane>
+                  <GridPane maxWidth="100.0" prefHeight="20.0" prefWidth="100.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="394/394" textFill="WHITE" />
                      </children>
                   </GridPane>
                </children></VBox>
+            <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <children>
+                  <GridPane alignment="CENTER" maxWidth="100.0" prefHeight="20.0" prefWidth="100.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Umbreon" textFill="WHITE" />
+                        <Label text="Nv.100" textFill="WHITE" GridPane.columnIndex="1">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <GridPane alignment="CENTER" maxWidth="100.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="75.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@lucario.png" />
+                           </image>
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <ImageView fitHeight="20.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                           <image>
+                              <Image url="@masculino.png" />
+                           </image>
+                           <GridPane.margin>
+                              <Insets left="30.0" top="70.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                     </children>
+                     <padding>
+                        <Insets bottom="30.0" top="30.0" />
+                     </padding>
+                  </GridPane>
+                  <GridPane maxWidth="100.0" prefHeight="20.0" prefWidth="100.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="45.0" minWidth="10.0" prefWidth="15.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="87.0" minWidth="10.0" prefWidth="85.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ProgressBar prefHeight="14.0" prefWidth="74.0" progress="1.0" style="-fx-accent: green;" GridPane.columnIndex="1">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </ProgressBar>
+                        <Label alignment="TOP_LEFT" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: grey;" text="PS" textFill="#f2bc0c" />
+                     </children>
+                  </GridPane>
+                  <GridPane maxWidth="100.0" prefHeight="20.0" prefWidth="100.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="394/394" textFill="WHITE" />
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <GridPane alignment="CENTER" maxWidth="100.0" prefHeight="20.0" prefWidth="100.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Umbreon" textFill="WHITE" />
+                        <Label text="Nv.100" textFill="WHITE" GridPane.columnIndex="1">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <GridPane alignment="CENTER" maxWidth="100.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="75.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@gyarados.png" />
+                           </image>
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <ImageView fitHeight="20.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                           <image>
+                              <Image url="@masculino.png" />
+                           </image>
+                           <GridPane.margin>
+                              <Insets left="30.0" top="70.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                     </children>
+                     <padding>
+                        <Insets bottom="30.0" top="30.0" />
+                     </padding>
+                  </GridPane>
+                  <GridPane maxWidth="100.0" prefHeight="20.0" prefWidth="100.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="45.0" minWidth="10.0" prefWidth="15.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="87.0" minWidth="10.0" prefWidth="85.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ProgressBar prefHeight="14.0" prefWidth="74.0" progress="1.0" style="-fx-accent: green;" GridPane.columnIndex="1">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </ProgressBar>
+                        <Label alignment="TOP_LEFT" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: grey;" text="PS" textFill="#f2bc0c" />
+                     </children>
+                  </GridPane>
+                  <GridPane maxWidth="100.0" prefHeight="20.0" prefWidth="100.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="394/394" textFill="WHITE" />
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+               <children>
+                  <GridPane alignment="CENTER" maxWidth="100.0" prefHeight="20.0" prefWidth="100.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Umbreon" textFill="WHITE" />
+                        <Label text="Nv.100" textFill="WHITE" GridPane.columnIndex="1">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <GridPane alignment="CENTER" maxWidth="100.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="75.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@infernape.png" />
+                           </image>
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <ImageView fitHeight="20.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                           <image>
+                              <Image url="@masculino.png" />
+                           </image>
+                           <GridPane.margin>
+                              <Insets left="30.0" top="70.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                     </children>
+                     <padding>
+                        <Insets bottom="30.0" top="30.0" />
+                     </padding>
+                  </GridPane>
+                  <GridPane maxWidth="100.0" prefHeight="20.0" prefWidth="100.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="45.0" minWidth="10.0" prefWidth="15.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="87.0" minWidth="10.0" prefWidth="85.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ProgressBar prefHeight="14.0" prefWidth="74.0" progress="1.0" style="-fx-accent: green;" GridPane.columnIndex="1">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </ProgressBar>
+                        <Label alignment="TOP_LEFT" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: grey;" text="PS" textFill="#f2bc0c" />
+                     </children>
+                  </GridPane>
+                  <GridPane maxWidth="100.0" prefHeight="20.0" prefWidth="100.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="394/394" textFill="WHITE" />
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
+               <children>
+                  <GridPane alignment="CENTER" maxWidth="100.0" prefHeight="20.0" prefWidth="100.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Umbreon" textFill="WHITE" />
+                        <Label text="Nv.100" textFill="WHITE" GridPane.columnIndex="1">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <GridPane alignment="CENTER" maxWidth="100.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="75.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@flygon.png" />
+                           </image>
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <ImageView fitHeight="20.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                           <image>
+                              <Image url="@masculino.png" />
+                           </image>
+                           <GridPane.margin>
+                              <Insets left="30.0" top="70.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                     </children>
+                     <padding>
+                        <Insets bottom="30.0" top="30.0" />
+                     </padding>
+                  </GridPane>
+                  <GridPane maxWidth="100.0" prefHeight="20.0" prefWidth="100.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="45.0" minWidth="10.0" prefWidth="15.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="87.0" minWidth="10.0" prefWidth="85.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ProgressBar prefHeight="14.0" prefWidth="74.0" progress="1.0" style="-fx-accent: green;" GridPane.columnIndex="1">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </ProgressBar>
+                        <Label alignment="TOP_LEFT" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: grey;" text="PS" textFill="#f2bc0c" />
+                     </children>
+                  </GridPane>
+                  <GridPane maxWidth="100.0" prefHeight="20.0" prefWidth="100.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="394/394" textFill="WHITE" />
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+               <children>
+                  <GridPane alignment="CENTER" maxWidth="100.0" prefHeight="20.0" prefWidth="100.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Umbreon" textFill="WHITE" />
+                        <Label text="Nv.100" textFill="WHITE" GridPane.columnIndex="1">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <GridPane alignment="CENTER" maxWidth="100.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="75.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@gengar.png" />
+                           </image>
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <ImageView fitHeight="20.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                           <image>
+                              <Image url="@masculino.png" />
+                           </image>
+                           <GridPane.margin>
+                              <Insets left="30.0" top="70.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                     </children>
+                     <padding>
+                        <Insets bottom="30.0" top="30.0" />
+                     </padding>
+                  </GridPane>
+                  <GridPane maxWidth="100.0" prefHeight="20.0" prefWidth="100.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="45.0" minWidth="10.0" prefWidth="15.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="87.0" minWidth="10.0" prefWidth="85.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ProgressBar prefHeight="14.0" prefWidth="74.0" progress="1.0" style="-fx-accent: green;" GridPane.columnIndex="1">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </ProgressBar>
+                        <Label alignment="TOP_LEFT" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: grey;" text="PS" textFill="#f2bc0c" />
+                     </children>
+                  </GridPane>
+                  <GridPane maxWidth="100.0" prefHeight="20.0" prefWidth="100.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="394/394" textFill="WHITE" />
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
          </children>
       </GridPane>
    </children>
