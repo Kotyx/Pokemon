@@ -1,10 +1,13 @@
 package sample;
 
 public class Pokemon {
-    public class charizard{
-        String nombre="Charizard";
-        int nivel=45;
-        int vida=148;
+    String nombre="";
+    int nivel=0;
+    int vida=0;
+    public Pokemon(String nombre,int nivel,int vida){
+        this.nombre=nombre;
+        this.nivel=nivel;
+        this.vida=vida;
     }
 
 }
