@@ -1,8 +1,14 @@
 package sample;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 
 public class Controller {
@@ -140,6 +146,7 @@ public class Controller {
         ap.setStyle("-fx-background-color: #D8D8D8; -fx-border-color: white;");
 
     }
+
 }
 
 
