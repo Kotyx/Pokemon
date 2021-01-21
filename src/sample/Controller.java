@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -78,6 +79,18 @@ public class Controller {
     private ImageView ivpokemon5;
     @FXML
     private ImageView ivpokemon6;
+    @FXML
+    private ProgressBar pb1;
+    @FXML
+    private ProgressBar pb2;
+    @FXML
+    private ProgressBar pb3;
+    @FXML
+    private ProgressBar pb4;
+    @FXML
+    private ProgressBar pb5;
+    @FXML
+    private ProgressBar pb6;
 
 
     Pokemon pokemon1=new Pokemon("Umbreon",100,394,"\\pokemon\\umbreon.png");
@@ -199,6 +212,33 @@ public class Controller {
             controller.transpaso(transpasop);
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    public void recivir(Pokemon poke,Double pb){
+        if(poke.nombre.equals(pokemon1.nombre)){
+            vida1.setText(poke.vida+"/"+ pokemon1.vida);
+            pb1.setProgress(pb);
+        }
+        if(poke.nombre.equals(pokemon2.nombre)){
+            vida2.setText(poke.vida+"/"+ pokemon2.vida);
+            pb2.setProgress(pb);
+        }
+        if(poke.nombre.equals(pokemon3.nombre)){
+            vida3.setText(poke.vida+"/"+ pokemon3.vida);
+            pb3.setProgress(pb);
+        }
+        if(poke.nombre.equals(pokemon4.nombre)){
+            vida4.setText(poke.vida+"/"+ pokemon4.vida);
+            pb4.setProgress(pb);
+        }
+        if(poke.nombre.equals(pokemon5.nombre)){
+            vida5.setText(poke.vida+"/"+ pokemon5.vida);
+            pb5.setProgress(pb);
+        }
+        if(poke.nombre.equals(pokemon6.nombre)){
+            vida6.setText(poke.vida+"/"+ pokemon6.vida);
+            pb6.setProgress(pb);
         }
     }
 

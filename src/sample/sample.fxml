@@ -86,7 +86,7 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <ProgressBar prefHeight="14.0" prefWidth="74.0" progress="1.0" style="-fx-accent: green;" GridPane.columnIndex="1">
+                        <ProgressBar fx:id="pb1" prefHeight="14.0" prefWidth="74.0" progress="1.0" style="-fx-accent: green;" GridPane.columnIndex="1">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
@@ -169,7 +169,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <ProgressBar prefHeight="14.0" prefWidth="74.0" progress="1.0" style="-fx-accent: green;" GridPane.columnIndex="1">
+                        <ProgressBar fx:id="pb2" prefHeight="14.0" prefWidth="74.0" progress="1.0" style="-fx-accent: green;" GridPane.columnIndex="1">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
@@ -253,7 +253,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <ProgressBar prefHeight="14.0" prefWidth="74.0" progress="1.0" style="-fx-accent: green;" GridPane.columnIndex="1">
+                        <ProgressBar fx:id="pb3" prefHeight="14.0" prefWidth="74.0" progress="1.0" style="-fx-accent: green;" GridPane.columnIndex="1">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
@@ -337,7 +337,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <ProgressBar prefHeight="14.0" prefWidth="74.0" progress="1.0" style="-fx-accent: green;" GridPane.columnIndex="1">
+                        <ProgressBar fx:id="pb4" prefHeight="14.0" prefWidth="74.0" progress="1.0" style="-fx-accent: green;" GridPane.columnIndex="1">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
@@ -421,7 +421,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <ProgressBar prefHeight="14.0" prefWidth="74.0" progress="1.0" style="-fx-accent: green;" GridPane.columnIndex="1">
+                        <ProgressBar fx:id="pb5" prefHeight="14.0" prefWidth="74.0" progress="1.0" style="-fx-accent: green;" GridPane.columnIndex="1">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
@@ -505,7 +505,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <ProgressBar prefHeight="14.0" prefWidth="74.0" progress="1.0" style="-fx-accent: green;" GridPane.columnIndex="1">
+                        <ProgressBar fx:id="pb6" prefHeight="14.0" prefWidth="74.0" progress="1.0" style="-fx-accent: green;" GridPane.columnIndex="1">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>

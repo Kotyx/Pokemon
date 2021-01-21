@@ -51,9 +51,11 @@ public class BatallaController {
 
     Pokemon enemigo=new Pokemon("Darkrai",100,344,"\\pokemon\\darkrai.png");
     int total=0;
-
+    Pokemon comprobacion;
+    Controller controller;
 
     public void transpaso(Pokemon pokemon){
+        comprobacion=pokemon;
         lnivelaliado.setText("Nv."+pokemon.nivel);
         lnombrealiado.setText(pokemon.nombre);
         Image imagenespalda=new Image(pokemon.imagen);
@@ -91,6 +93,7 @@ public class BatallaController {
     public void onBseguroClicked(){
         pbenemigo.setProgress(pbenemigo.getProgress()-0.2);
         pbaliado.setProgress(pbaliado.getProgress()-0.2);
+        restavida(0.2);
         comprobar();
     }
 
@@ -101,6 +104,7 @@ public class BatallaController {
         double dañoe=r.nextInt(15)+10;
         dañoa=dañoa/100;
         dañoe=dañoe/100;
+        restavida(dañoa);
         pbenemigo.setProgress(pbenemigo.getProgress()-dañoe);
         pbaliado.setProgress(pbaliado.getProgress()-dañoa);
         comprobar();
@@ -113,6 +117,7 @@ public class BatallaController {
         double dañoe=r.nextInt(50);
         dañoa=dañoa/100;
         dañoe=dañoe/100;
+        restavida(dañoa);
         pbenemigo.setProgress(pbenemigo.getProgress()-dañoe);
         pbaliado.setProgress(pbaliado.getProgress()-dañoa);
         comprobar();
@@ -125,6 +130,7 @@ public class BatallaController {
         double curae=r.nextInt(50)+25;
         curaa=curaa/100;
         curae=curae/100;
+        curarvida(curaa);
         pbenemigo.setProgress(pbenemigo.getProgress()+curae);
         pbaliado.setProgress(pbaliado.getProgress()+curaa);
     }
@@ -141,6 +147,9 @@ public class BatallaController {
                 if(resultado.get()==ButtonType.OK){
                     System.exit(0);
                 }else if (resultado.get() == ButtonType.CANCEL){
+                    comprobacion.vida= Integer.parseInt(lpsaliado.getText());
+                    Double pb=pbaliado.getProgress();
+                    controller.recivir(comprobacion,pb);
                     Stage stage = (Stage) bcancelar.getScene().getWindow();
                     stage.close();
                 }else{
@@ -152,4 +161,18 @@ public class BatallaController {
 
     }
 
+    public void restavida(Double daño){
+        Double vida=comprobacion.vida*daño;
+        comprobacion.vida=(int) (comprobacion.vida-vida);
+    }
+    public void curarvida(Double cura) {
+        int vidatotal = comprobacion.vida;
+        Double vida = comprobacion.vida * cura;
+        if (vida > comprobacion.vida) {
+            comprobacion.vida = vidatotal;
+        } else {
+            comprobacion.vida = (int) (comprobacion.vida - vida);
+
+        }
+    }
 }
