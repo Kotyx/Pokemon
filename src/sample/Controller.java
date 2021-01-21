@@ -4,9 +4,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -60,24 +64,45 @@ public class Controller {
     private AnchorPane ap5;
     @FXML
     private AnchorPane ap6;
+    @FXML
+    private Button bsiguiente;
+    @FXML
+    private ImageView ivpokemon1;
+    @FXML
+    private ImageView ivpokemon2;
+    @FXML
+    private ImageView ivpokemon3;
+    @FXML
+    private ImageView ivpokemon4;
+    @FXML
+    private ImageView ivpokemon5;
+    @FXML
+    private ImageView ivpokemon6;
 
-    Pokemon pokemon1=new Pokemon("Umbreon",100,394);
-    Pokemon pokemon2=new Pokemon("Gengar",100,394);
-    Pokemon pokemon3=new Pokemon("Flygon",100,364);
-    Pokemon pokemon4=new Pokemon("Infernape",100,356);
-    Pokemon pokemon5=new Pokemon("Gyarados",100,394);
-    Pokemon pokemon6=new Pokemon("Lucario",100,344);
+
+    Pokemon pokemon1=new Pokemon("Umbreon",100,394,"\\pokemon\\umbreon.png");
+    Pokemon pokemon2=new Pokemon("Gengar",100,394,"\\pokemon\\gengar.png");
+    Pokemon pokemon3=new Pokemon("Flygon",100,364,"\\pokemon\\flygon.png");
+    Pokemon pokemon4=new Pokemon("Infernape",100,356,"\\pokemon\\infernape.png");
+    Pokemon pokemon5=new Pokemon("Gyarados",100,394,"\\pokemon\\gyarados.png");
+    Pokemon pokemon6=new Pokemon("Lucario",100,344,"\\pokemon\\lucario.png");
+
+    Pokemon transpasop;
+
+
     public void initialize(){
-        rellenar(nombre1,nivel1,vida1,pokemon1);
-        rellenar(nombre2,nivel2,vida2,pokemon2);
-        rellenar(nombre3,nivel3,vida3,pokemon3);
-        rellenar(nombre4,nivel4,vida4,pokemon4);
-        rellenar(nombre5,nivel5,vida5,pokemon5);
-        rellenar(nombre6,nivel6,vida6,pokemon6);
+        rellenar(nombre1,nivel1,vida1,ivpokemon1,pokemon1);
+        rellenar(nombre2,nivel2,vida2,ivpokemon2,pokemon2);
+        rellenar(nombre3,nivel3,vida3,ivpokemon3,pokemon3);
+        rellenar(nombre4,nivel4,vida4,ivpokemon4,pokemon4);
+        rellenar(nombre5,nivel5,vida5,ivpokemon5,pokemon5);
+        rellenar(nombre6,nivel6,vida6,ivpokemon6,pokemon6);
     }
 
     public void onImagen1clicked(){
         seleccionado(nombre1,nivel1,vida1,ap1);
+        pokemon1.imagen="\\pokemon\\umbreonespalda.png";
+        transpasop=pokemon1;
         predeterminado(nombre2,nivel2,vida2,ap2);
         predeterminado(nombre3,nivel3,vida3,ap3);
         predeterminado(nombre4,nivel4,vida4,ap4);
@@ -87,6 +112,8 @@ public class Controller {
     public void onImagen2clicked(){
         predeterminado(nombre1,nivel1,vida1,ap1);
         seleccionado(nombre2,nivel2,vida2,ap2);
+        pokemon2.imagen="\\pokemon\\gengarespalda.png";
+        transpasop=pokemon2;
         predeterminado(nombre3,nivel3,vida3,ap3);
         predeterminado(nombre4,nivel4,vida4,ap4);
         predeterminado(nombre5,nivel5,vida5,ap5);
@@ -96,6 +123,8 @@ public class Controller {
         predeterminado(nombre1,nivel1,vida1,ap1);
         predeterminado(nombre2,nivel2,vida2,ap2);
         seleccionado(nombre3,nivel3,vida3,ap3);
+        pokemon3.imagen="\\pokemon\\flygonespalda.png";
+        transpasop=pokemon3;
         predeterminado(nombre4,nivel4,vida4,ap4);
         predeterminado(nombre5,nivel5,vida5,ap5);
         predeterminado(nombre6,nivel6,vida6,ap6);
@@ -105,6 +134,8 @@ public class Controller {
         predeterminado(nombre2,nivel2,vida2,ap2);
         predeterminado(nombre3,nivel3,vida3,ap3);
         seleccionado(nombre4,nivel4,vida4,ap4);
+        pokemon4.imagen="\\pokemon\\infernapeespalda.png";
+        transpasop=pokemon4;
         predeterminado(nombre5,nivel5,vida5,ap5);
         predeterminado(nombre6,nivel6,vida6,ap6);
     }
@@ -114,6 +145,8 @@ public class Controller {
         predeterminado(nombre3,nivel3,vida3,ap3);
         predeterminado(nombre4,nivel4,vida4,ap4);
         seleccionado(nombre5,nivel5,vida5,ap5);
+        pokemon5.imagen="\\pokemon\\gyaradosespalda.png";
+        transpasop=pokemon5;
         predeterminado(nombre6,nivel6,vida6,ap6);
     }
     public void onImagen6clicked(){
@@ -123,12 +156,16 @@ public class Controller {
         predeterminado(nombre4,nivel4,vida4,ap4);
         predeterminado(nombre5,nivel5,vida5,ap5);
         seleccionado(nombre6,nivel6,vida6,ap6);
+        pokemon6.imagen="\\pokemon\\lucarioespalda.png";
+        transpasop=pokemon6;
     }
 
-    public static void rellenar(Label nombre,Label nivel,Label vida,Pokemon poke){
+    public static void rellenar(Label nombre,Label nivel,Label vida,ImageView imagen,Pokemon poke){
         nombre.setText(poke.nombre);
         nivel.setText("Nv."+poke.nivel);
         vida.setText(poke.vida+"/"+ poke.vida);
+        Image image=new Image(poke.imagen);
+        imagen.setImage(image);
     }
 
     public static void predeterminado(Label nombre,Label nivel,Label vida,AnchorPane ap){
@@ -145,6 +182,24 @@ public class Controller {
         nivel.setStyle("-fx-text-fill:#00C1FF;");
         ap.setStyle("-fx-background-color: #D8D8D8; -fx-border-color: white;");
 
+    }
+
+    public void onBsiguienteClicked(){
+        try {
+            Stage stage = new Stage();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Batalla.fxml"));
+            GridPane root = (GridPane) loader.load();
+            Scene scene = new Scene(root, 500, 441);
+            stage.setScene(scene);
+            // Oculta los botones de cerrar/minimizar/maximizar
+            //stage.initStyle(StageStyle.UNDECORATED);
+            stage.show();
+
+            BatallaController controller = loader.getController();
+            controller.transpaso(transpasop);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }
