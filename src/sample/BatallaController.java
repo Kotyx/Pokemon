@@ -104,9 +104,9 @@ public class BatallaController {
         double dañoe=r.nextInt(15)+10;
         dañoa=dañoa/100;
         dañoe=dañoe/100;
-        restavida(dañoa);
         pbenemigo.setProgress(pbenemigo.getProgress()-dañoe);
         pbaliado.setProgress(pbaliado.getProgress()-dañoa);
+        restavida(dañoa);
         comprobar();
     }
 
@@ -117,9 +117,9 @@ public class BatallaController {
         double dañoe=r.nextInt(50);
         dañoa=dañoa/100;
         dañoe=dañoe/100;
-        restavida(dañoa);
         pbenemigo.setProgress(pbenemigo.getProgress()-dañoe);
         pbaliado.setProgress(pbaliado.getProgress()-dañoa);
+        restavida(dañoa);
         comprobar();
     }
 
@@ -130,9 +130,10 @@ public class BatallaController {
         double curae=r.nextInt(50)+25;
         curaa=curaa/100;
         curae=curae/100;
-        curarvida(curaa);
         pbenemigo.setProgress(pbenemigo.getProgress()+curae);
         pbaliado.setProgress(pbaliado.getProgress()+curaa);
+        curarvida(curaa,pbaliado);
+        curarvida(curae,pbenemigo);
     }
 
     @FXML
@@ -147,8 +148,8 @@ public class BatallaController {
                 if(resultado.get()==ButtonType.OK){
                     System.exit(0);
                 }else if (resultado.get() == ButtonType.CANCEL){
-                    comprobacion.vida= Integer.parseInt(lpsaliado.getText());
-                    Double pb=pbaliado.getProgress();
+                    //No funciona y no se el porque
+                    double pb=pbaliado.getProgress();
                     controller.recivir(comprobacion,pb);
                     Stage stage = (Stage) bcancelar.getScene().getWindow();
                     stage.close();
@@ -161,18 +162,22 @@ public class BatallaController {
 
     }
 
+
+
     public void restavida(Double daño){
         Double vida=comprobacion.vida*daño;
         comprobacion.vida=(int) (comprobacion.vida-vida);
+        lpsaliado.setText(comprobacion.vida+"/"+total);
     }
-    public void curarvida(Double cura) {
-        int vidatotal = comprobacion.vida;
+    public void curarvida(Double cura,ProgressBar pb) {
         Double vida = comprobacion.vida * cura;
-        if (vida > comprobacion.vida) {
-            comprobacion.vida = vidatotal;
+        int resultado = (int) (comprobacion.vida + vida);
+        if (resultado >= comprobacion.vida) {
+            comprobacion.vida = total;
+            pb.setProgress(1);
         } else {
-            comprobacion.vida = (int) (comprobacion.vida - vida);
-
+            comprobacion.vida = resultado;
         }
+        lpsaliado.setText(comprobacion.vida+"/"+total);
     }
 }

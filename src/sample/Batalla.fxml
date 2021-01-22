@@ -44,8 +44,7 @@
             <ProgressBar fx:id="pbaliado" prefHeight="14.0" prefWidth="147.0" progress="1.0" style="-fx-background-color: #FFFFFF;" />
             <HBox layoutX="10.0" layoutY="67.0" prefHeight="16.0" prefWidth="299.0">
                <children>
-                  <Label fx:id="lnombrealiado1" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="115.0" style="-fx-background-color: #FFFFFF;" text="394" />
-                  <Label fx:id="lnivelaliado1" prefHeight="17.0" prefWidth="32.0" style="-fx-background-color: #FFFFFF;" text="/394" />
+                  <Label fx:id="lpsaliado" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="147.0" style="-fx-background-color: #FFFFFF;" text="394" />
                </children>
             </HBox>
          </children>
