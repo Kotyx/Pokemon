@@ -91,9 +91,10 @@ public class BatallaController {
 
     @FXML
     public void onBseguroClicked(){
+        restavida(0.2,lpsaliado);
+        restavida(0.2,lpsenemigo);
         pbenemigo.setProgress(pbenemigo.getProgress()-0.2);
         pbaliado.setProgress(pbaliado.getProgress()-0.2);
-        restavida(0.2);
         comprobar();
     }
 
@@ -104,9 +105,10 @@ public class BatallaController {
         double dañoe=r.nextInt(15)+10;
         dañoa=dañoa/100;
         dañoe=dañoe/100;
+        restavida(dañoa,lpsaliado);
+        restavida(dañoe,lpsenemigo);
         pbenemigo.setProgress(pbenemigo.getProgress()-dañoe);
         pbaliado.setProgress(pbaliado.getProgress()-dañoa);
-        restavida(dañoa);
         comprobar();
     }
 
@@ -117,9 +119,10 @@ public class BatallaController {
         double dañoe=r.nextInt(50);
         dañoa=dañoa/100;
         dañoe=dañoe/100;
+        restavida(dañoa,lpsaliado);
+        restavida(dañoe,lpsenemigo);
         pbenemigo.setProgress(pbenemigo.getProgress()-dañoe);
         pbaliado.setProgress(pbaliado.getProgress()-dañoa);
-        restavida(dañoa);
         comprobar();
     }
 
@@ -130,10 +133,11 @@ public class BatallaController {
         double curae=r.nextInt(50)+25;
         curaa=curaa/100;
         curae=curae/100;
-        pbenemigo.setProgress(pbenemigo.getProgress()+curae);
-        pbaliado.setProgress(pbaliado.getProgress()+curaa);
         curarvida(curaa,pbaliado);
         curarvida(curae,pbenemigo);
+        pbenemigo.setProgress(pbenemigo.getProgress()+curae);
+        pbaliado.setProgress(pbaliado.getProgress()+curaa);
+
     }
 
     @FXML
@@ -150,7 +154,7 @@ public class BatallaController {
                 }else if (resultado.get() == ButtonType.CANCEL){
                     //No funciona y no se el porque
                     double pb=pbaliado.getProgress();
-                    controller.recivir(comprobacion,pb);
+                    controller.recibir(comprobacion,pb);
                     Stage stage = (Stage) bcancelar.getScene().getWindow();
                     stage.close();
                 }else{
@@ -164,10 +168,10 @@ public class BatallaController {
 
 
 
-    public void restavida(Double daño){
+    public void restavida(Double daño,Label ps){
         Double vida=comprobacion.vida*daño;
         comprobacion.vida=(int) (comprobacion.vida-vida);
-        lpsaliado.setText(comprobacion.vida+"/"+total);
+        ps.setText(comprobacion.vida+"/"+total);
     }
     public void curarvida(Double cura,ProgressBar pb) {
         Double vida = comprobacion.vida * cura;
@@ -179,5 +183,9 @@ public class BatallaController {
             comprobacion.vida = resultado;
         }
         lpsaliado.setText(comprobacion.vida+"/"+total);
+    }
+
+    public void setventana1(Controller controller1){
+        controller=controller1;
     }
 }

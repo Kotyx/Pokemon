@@ -210,12 +210,13 @@ public class Controller {
 
             BatallaController controller = loader.getController();
             controller.transpaso(transpasop);
+            controller.setventana1(this);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public void recivir(Pokemon poke,Double pb){
+    public void recibir(Pokemon poke,Double pb){
         if(poke.nombre.equals(pokemon1.nombre)){
             vida1.setText(poke.vida+"/"+ pokemon1.vida);
             pb1.setProgress(pb);
