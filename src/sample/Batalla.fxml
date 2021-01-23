@@ -41,10 +41,10 @@
                   <Label fx:id="lnivelaliado" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="37.0" style="-fx-background-color: #FFFFFF;" text="Label" />
                </children>
             </HBox>
-            <ProgressBar fx:id="pbaliado" prefHeight="14.0" prefWidth="147.0" progress="1.0" style="-fx-background-color: #FFFFFF;" />
+            <ProgressBar fx:id="pbaliado" onMouseEntered="#onpbaliadoEntered" onMouseExited="#onpbaliadoExit" prefHeight="14.0" prefWidth="147.0" progress="1.0" style="-fx-background-color: #FFFFFF;" />
             <HBox layoutX="10.0" layoutY="67.0" prefHeight="16.0" prefWidth="299.0">
                <children>
-                  <Label fx:id="lpsaliado" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="147.0" style="-fx-background-color: #FFFFFF;" text="394" />
+                  <Label fx:id="lpsaliado" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="147.0" style="-fx-background-color: #FFFFFF;" visible="false" />
                </children>
             </HBox>
          </children>
@@ -92,8 +92,8 @@
                   <Label fx:id="lnivelenemigo" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="37.0" style="-fx-background-color: #FFFFFF;" text="Label" />
                </children>
             </HBox>
-            <ProgressBar fx:id="pbenemigo" prefHeight="14.0" prefWidth="147.0" progress="1.0" style="-fx-background-color: #FFFFFF;" />
-            <Label fx:id="lpsenemigo" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="147.0" style="-fx-background-color: #FFFFFF;" text="Label" />
+            <ProgressBar fx:id="pbenemigo" onMouseEntered="#onpbenemigoEntered" onMouseExited="#onpbenemigoExit" prefHeight="14.0" prefWidth="147.0" progress="1.0" style="-fx-background-color: #FFFFFF;" />
+            <Label fx:id="lpsenemigo" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="147.0" style="-fx-background-color: #FFFFFF;" text="Label" visible="false" />
          </children>
       </VBox>
    </children>

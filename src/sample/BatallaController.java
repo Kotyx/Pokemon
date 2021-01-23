@@ -188,4 +188,18 @@ public class BatallaController {
     public void setventana1(Controller controller1){
         controller=controller1;
     }
+
+    public void onpbaliadoEntered(){
+        lpsaliado.setVisible(true);
+    }
+    public void onpbaliadoExit(){
+        lpsaliado.setVisible(false);
+    }
+    public void onpbenemigoEntered(){
+        lpsenemigo.setVisible(true);
+    }
+    public void onpbenemigoExit(){
+        lpsenemigo.setVisible(false);
+    }
+
 }
