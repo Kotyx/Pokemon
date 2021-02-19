@@ -13,7 +13,7 @@
       <RowConstraints />
    </rowConstraints>
    <children>
-      <GridPane prefHeight="545.0" prefWidth="823.0" style="-fx-background-color: #7C5E80;">
+      <GridPane alignment="CENTER" prefHeight="545.0" prefWidth="823.0" style="-fx-background-color: #7C5E80;">
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -316,11 +316,7 @@
                         </ImageView>
                         <AnchorPane fx:id="ap4" prefHeight="30.0" prefWidth="49.0" style="-fx-background-color: #5F5F5F; -fx-border-color: black;">
                            <children>
-                              <ImageView fx:id="ivpokemon4" fitHeight="75.0" fitWidth="100.0" layoutX="4.0" layoutY="-2.0" onMouseClicked="#onImagen4clicked" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../pokemon/infernape.png" />
-                                 </image>
-                              </ImageView>
+                              <ImageView fx:id="ivpokemon4" fitHeight="75.0" fitWidth="100.0" layoutX="4.0" layoutY="-2.0" onMouseClicked="#onImagen4clicked" pickOnBounds="true" preserveRatio="true" />
                            </children>
                         </AnchorPane>
                      </children>
@@ -530,6 +526,11 @@
             <Button fx:id="bsiguiente" mnemonicParsing="false" onMouseClicked="#onBsiguienteClicked" style="-fx-background-color: #7C5E80;" text="Siguiente" textFill="#d1ba0a" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets left="105.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="bEstadisticas" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#onBestadisticasClicked" text="Ver estadisticas" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="88.0" />
                </GridPane.margin>
             </Button>
          </children>

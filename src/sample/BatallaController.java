@@ -51,6 +51,8 @@ public class BatallaController {
 
     Pokemon enemigo=new Pokemon("Darkrai",100,344,"\\pokemon\\darkrai.png");
     int total=0;
+    int dañoaliado=0;
+    int dañoenemigo=0;
     Pokemon comprobacion;
     Controller controller;
 
@@ -95,6 +97,8 @@ public class BatallaController {
         restavida(0.2,lpsenemigo);
         pbenemigo.setProgress(pbenemigo.getProgress()-0.2);
         pbaliado.setProgress(pbaliado.getProgress()-0.2);
+        dañoaliado=dañoaliado+20;
+        dañoenemigo=dañoenemigo+20;
         comprobar();
     }
 
@@ -109,6 +113,8 @@ public class BatallaController {
         restavida(dañoe,lpsenemigo);
         pbenemigo.setProgress(pbenemigo.getProgress()-dañoe);
         pbaliado.setProgress(pbaliado.getProgress()-dañoa);
+        dañoaliado=dañoaliado+(int)dañoa;
+        dañoenemigo=dañoenemigo+(int)dañoe;
         comprobar();
     }
 
@@ -123,6 +129,8 @@ public class BatallaController {
         restavida(dañoe,lpsenemigo);
         pbenemigo.setProgress(pbenemigo.getProgress()-dañoe);
         pbaliado.setProgress(pbaliado.getProgress()-dañoa);
+        dañoaliado=dañoaliado+(int)dañoa;
+        dañoenemigo=dañoenemigo+(int)dañoe;
         comprobar();
     }
 
@@ -152,9 +160,8 @@ public class BatallaController {
                 if(resultado.get()==ButtonType.OK){
                     System.exit(0);
                 }else if (resultado.get() == ButtonType.CANCEL){
-                    //No funciona y no se el porque
                     double pb=pbaliado.getProgress();
-                    controller.recibir(comprobacion,pb);
+                    controller.recibir(comprobacion,pb,dañoaliado,dañoenemigo);
                     Stage stage = (Stage) bcancelar.getScene().getWindow();
                     stage.close();
                 }else{
@@ -176,7 +183,7 @@ public class BatallaController {
     public void curarvida(Double cura,ProgressBar pb) {
         Double vida = comprobacion.vida * cura;
         int resultado = (int) (comprobacion.vida + vida);
-        if (resultado >= comprobacion.vida) {
+        if (resultado > comprobacion.vida) {
             comprobacion.vida = total;
             pb.setProgress(1);
         } else {
